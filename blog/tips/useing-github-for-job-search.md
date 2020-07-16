@@ -3,6 +3,9 @@ title: Let the bots help find you a job
 date: "2020-05-12T01:00:11Z"
 featuredImage: './RobotReminder.png'
 ---
+
+![Issues](./GHIssues.png)
+
 Every person who is searching for a job must track their progress in some way. I have heard of this done through spreadsheets, notepads, custom apps, etc. I tried to track them through a few different ways but each way had its issues. On a whim, I decided to try using GitHub for this round of searching for a new job. Along the way, I found a few hidden benefits.
 
 ## Huge benefit - follow up tracking 🤖
