@@ -5,11 +5,14 @@ featuredImage: './RobotReminder.png'
 ---
 
 ![Issues](./GHIssues.png)
-Every person who is searching for a job must track their progress in some way. I have heard of this done through spreadsheets, notepads, custom apps, etc. I tried to track them through a few different ways but each way had its issues. On a whim, I decided to try using GitHub for this round of searching for a new job. Along the way, I found a few hidden benefits.
 
-## Huge benefit - follow up tracking 🤖
+<sub>Updated 2020-07-24</sub>
 
-I will get to the other benefits later in this post, I just wanted to hit the big one near the beginning. GitHub offers the `Stale-bot` for free for any repository.  Stale bot adds a label to an issue if it has not been updated after a period. If the issue is still not updated after that Stale bot eventually closes the issue. This is perfect for a follow-up reminder. I used the following stalebot.yml to get a reminder every 7 days for each position.
+Ok, so now you must search for a job. I have been there. I have tried to track my applications and related material through email, spreadsheets, etc. I have never successfully followed up on jobs consistently until my last job search. On a whim, I decided to try using GitHub for this round. Surprisingly it worked well, better than I expected. Then I found one of my favorite bots.
+
+## Stale-bot
+
+Set me to introduce (or re-introduce) you to Stale-bot. Stale is a free bot on Github. Its traditional purpose is to mark issues as stale (as the name suggests) after a predetermined amount of time. I decided to use its functionality in a slightly different way. I am using the bot as a reminder generating bot to remind me to follow up on the jobs I have applied. Below is the configuration I used to get a reminder every seven days to follow up.
 
 ```yaml
 # Number of days of inactivity before an issue becomes stale
@@ -30,20 +33,34 @@ markComment: >
 closeComment: false
 ```
 
-## Keep the job description 🗄
+## Gigantic notes space
 
-You can copy the full job description into your issue. It is often handy to have the job description at easy access when applying for the position, updating your resume, or performing follow-up. I don't what to log into each job board to find out if the position had any follow up information in the posting. I want all the information easy to access.
+Within Github issues, you have a nearly unlimited space to put information. I used the description section of the issue to hold the job description. Some application sites hide the job description once you hit apply. If you have copied the job description, you can also use it when talking to the recruiter, interviewer, or when giving follow up.
 
-## Your notes 🖉
+I used the comment space to track any correspondence. The comments included whom I talked to, a copy of the email I sent, or the script for my voicemail. If you follow up with a company more than one time, you can reference the last follow up for context. Finally, you can track all of your interactions with a company (may be needed for unemployment).
 
-You have unlimited (afaik) space to write your notes on a given issue. You can put all your follow up emails, voicemails, and/or names of people you talked within an issue. I use many comments on an issue to hold all my follow up actions. I can look at my entire interaction history with a position on a single page.
+## Other Github Perks
 
-## GitHub Search 🔎
+### Labels
 
-At the time I am writing this, I have applied to a large number of jobs. It can sometimes get confusing if you use multiple job boards. Enter the GitHub search. GitHub search lets you look for any word in the job description or notes. This is beneficial if you are not sure if you have applied to the position or company before. When I started to use GitHub issues, I was concerned about recruiters sending my resume to a job to which I already applied.
+I use labels to mark where I found the posting, how I applied, and if I received an interview. You can customize the labels color text and even emoji to suit your styles. Oh, and by the way, you can filter by labels as well. That is a trick I use on a near-daily basis. I sort by jobs buy if they have the `time for follow up` label and then by least recently updated (do the oldest first).
 
-## Labels 🏷
+### Search 🔎
 
-I use labels to mark where I found the posting, how I applied, and if I have been interviewed. You can customize the labels color text and even emoji to suit your styles. Oh, and by the way, you can filter by labels as well. That is a trick I use on a near-daily basis. I sort by jobs buy if they have the `time for follow up` label and then by least recently updated (do the oldest first).
+In my last job search, I applied for a lot of jobs. Many job boards had the same job listed. I had to make sure I was not double applying for any given position. When I used Github in the ways I described, I could search for keywords or job titles to see if I had already applied. The search looks through your title, description, comments, and labels to find any matches to your terms.
 
-To sum up, let the bots do the tracking for you.
+I also used search when I would get calls from jobs I had applied and when recruiters would cold call me. Since Github has an iOS app, I could have the job description in front of me within seconds, no matter what time they called. Once I had it in front of me, I could use the keywords for the job.
+
+### Sort/filter issues
+
+I created a shortcut to get to all of my issues that were marked for follow up, sorted by least recently updated first. I could jump on my computer, open the window, and tackle many jobs within a short amount of time. The sorted list helped me not miss my follow-ups by letting one fall through the crack.
+
+## App built for exporting
+
+When I started using this process, I was on unemployment. I knew that the State could ask for a detail of all the job-seeking activity I had accomplished on any given week. To this end, I created an OAuth GraphQL app that generates an excel file with all the issues from a given repository. It may not be the final form of your need. However, it will get you close. Current app address is <https://github-issues-to-excel.netlify.app/>. *Feel free to send in pull requests for new features.*
+
+## Closing thoughts
+
+Applying for a job is hard. Follow-up is key to getting a position. Let the bots help you find your next job, position, career, etc.
+
+God Bless.
